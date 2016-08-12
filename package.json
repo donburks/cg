@@ -1,0 +1,29 @@
+{
+  "name": "electerrain",
+  "version": "1.0.0",
+  "description": "A Node-Electron terrain generating app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donburks/electerrain.git"
+  },
+  "keywords": [
+    "node",
+    "electron",
+    "terrain",
+    "fantasy"
+  ],
+  "author": "Don Burks <don@donburks.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donburks/electerrain/issues"
+  },
+  "homepage": "https://github.com/donburks/electerrain#readme",
+  "dependencies": {
+    "electron": "^1.3.3"
+  }
+}
