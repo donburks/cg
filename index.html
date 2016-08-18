@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Generating fantasy maps </title>
+  <head>
+      <meta charset="UTF-8">
+      <title> GFC </title>
 
-        <link rel="stylesheet" href="css/style.css" />
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-        <link href="css/terrain.css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+      <link href="css/terrain.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
 
-        <script src="js/d3.v4.js"></script>
-        <script src="js/priority-queue.js"></script>
-        <script src="js/language.js"></script>
-        <script src="js/terrain.js"></script>
-    </head>
-    <body>
-      <div id="content">
-        <div class="splash">
-          <a href="/">Home</a>
-          <h1>Generating fantasy maps</h1>
+      <script src="js/d3.v4.js"></script>
+      <script src="js/priority-queue.js"></script>
+      <script src="js/language.js"></script>
+      <script src="js/terrain.js"></script>
+      <script src="js/zepto.min.js"></script>
+      <script src="js/controls.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="splash">
+        <h1>Generator of Fantasy Cartography</h1>
+      </div>
+      <div class="note">
+
+        <div class="example" id="final">
+          <p>Click the button below to generate a fantasy map.</p>
+          <form id="params">
+            <fieldset>
+              <legend>[ Change Parameters <span>-</span> ]</legend>
+              <div class="controls">
+                <label for="numCities">Number of Cities: </label><input type="number" value="" placeholder="Ex: 5"><br>
+              </div>
+            </fieldset>
+          </form>
         </div>
-        <div class="note">
 
-          <div class="example" id="final">
-            <p>I wanted to make a nice interactive example for this, but trying to separate out the label placement code made me feel physically unwell. Sorry about that.</p>
-          </div>
-
+        <div id="footer">
           <p>The JavaScript code powering this page is available <a href="https://github.com/mewo2/terrain">on GitHub</a>.</p>
 
-          <script src="js/terraincontrols.js"></script>
         </div>
       </div>
+    </div>
   </body>
 </html>
