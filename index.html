@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title> GFC </title>
+      <title> Cartographic Generator </title>
 
       <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
       <link href="css/terrain.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
 
+      <script src="js/saveSvgAsPng.js"></script>
       <script src="js/d3.v4.js"></script>
       <script src="js/priority-queue.js"></script>
       <script src="js/language.js"></script>
@@ -18,20 +19,22 @@
   <body>
     <div id="content">
       <div class="splash">
-        <h1>Generator of Fantasy Cartography</h1>
+        <h1>Cartographic Generator</h1>
       </div>
       <div class="note">
 
         <div class="example" id="final">
-          <p>Click the button below to generate a fantasy map.</p>
-          <form id="params">
-            <fieldset>
-              <legend>[ Change Parameters <span>-</span> ]</legend>
-              <div class="controls">
-                <label for="numCities">Number of Cities: </label><input type="number" value="" placeholder="Ex: 5"><br>
-              </div>
-            </fieldset>
-          </form>
+          <p>Click the button below to generate a map.</p>
+          <fieldset class="closed">
+            <legend>[ Change Parameters <span>+</span> ]</legend>
+            <div class="controls">
+              <label for="numCities"># of Cities: </label><input type="number" name="numCities" id="numCities" value="" placeholder="Def: 15" data-field="ncities"><br>
+              <label for="numTerritories"># of Territories: </label><input type="number" name="numTerritories" id="numTerritories" value="" placeholder="Def: 5" data-field="nterrs"><br>
+              <label for="numPts">Terrain Complexity: </label><input type="range" id="numPts" min="250" max="25000" value="16384" step="25" data-field="npts"><br>
+              <label for="bgColor">BG Color: </label><input type="color" id="bgColor" value="#ffffff" data-field="bgcolor"><br>
+              <label for="lineColor">Line Color: </label><input type="color" id="lineColor" value="#000000" data-field="linecolor"><br>
+            </div>
+          </fieldset>
         </div>
 
         <div id="footer">
