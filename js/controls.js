@@ -1,4 +1,5 @@
 $(function() {
+  var addBtn = true; //Whether the Save to PNG button should be inserted
   defaultParams.bgcolor = "#ffffff";
   defaultParams.linecolor = "#000000";
 
@@ -25,17 +26,19 @@ $(function() {
   var finalSVG = addSVG(finalDiv);
 
   finalDiv.append("button")
-      .text("Generate high resolution map")
+      .text("Generate map")
       .on("click", function () {
         doMap(finalSVG, defaultParams);
-        finalDiv.append("button")
-          .text("Save to PNG")
-          .on("click", function () {
-              var ds = genDate();
-              var svg = $("#final").find('svg');
-              console.log(svg);
-              saveSvgAsPng(svg[0], "map-"+ds + ".png", {backgroundColor: defaultParams.bgcolor, top: -500, left: -500});
-          });
+        if (addBtn) { 
+          finalDiv.append("button")
+            .text("Save to PNG")
+            .on("click", function () {
+                var ds = genDate();
+                var svg = $("#final").find('svg');
+                saveSvgAsPng(svg[0], "map-"+ds + ".png", {backgroundColor: defaultParams.bgcolor, top: -500, left: -500});
+            });
+          addBtn = false;
+        }
       });
 
 

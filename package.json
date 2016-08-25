@@ -1,5 +1,5 @@
 {
-  "name": "Cartographic Generator",
+  "name": "CG",
   "version": "1.0.0",
   "description": "A Node-Electron terrain generating app",
   "main": "app.js",
